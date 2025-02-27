@@ -1,33 +1,50 @@
-
+"use client"
+import { useContext } from "react";
+import { MyLanguage } from "@/context/myLanguage";
 function productitem({image,title,description,Price}){
+  const{language}=useContext(MyLanguage)
     return(
         <div>
-            <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-      {/* Product Image */}
-      <img
-        className="w-full h-48 object-cover"
-        src={image}
-        alt="Product Image"
-      />
 
-      {/* Product Content */}
-      <div className="px-6 py-4">
-        <h2 className="text-xl font-bold text-gray-800">{title}</h2>
-        <p className="text-gray-600 text-sm mt-2">
-          {description}
-        </p>
-        <p className="text-lg font-semibold text-blue-600 mt-4">{Price}</p>
-      </div>
 
-      {/* Button */}
-      <div className="px-6 py-4">
-        <button
-          className="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
-        >
-          View Details
-        </button>
-      </div>
-    </div>
+
+     <div className="border p-4 rounded-lg shadow-md bg-white">
+         <img src={image} alt="کفش اسپرت" className="w-full h-40 object-cover rounded-md" />
+          <h3 className="mt-2 text-lg font-semibold">{title}</h3>
+          <p className="text-red-500">{Price}$</p>
+          <p className="text-green-600 font-bold">{description}</p>
+          <button className="mt-2 w-full bg-red-500 text-white py-1 rounded-md hover:bg-red-600">خرید</button>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
     )
 }

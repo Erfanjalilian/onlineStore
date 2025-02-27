@@ -1,126 +1,309 @@
 {
-    "store":[
+  "store": [
+    {
+      "category":"شلوار",
+      "title": "Sample Product",
+      "Price": "69",
+      "image": "https://poshakmeysammj.com/wp-content/uploads/2025/01/IMG_2025-01-19-144518.jpeg",
+      "description": "great",
+      "id": "1"
+    },
+    {
+      "category":"تی شرت",
+      "title": "Sample Product",
+      "Price": "67",
+      "image": "https://poshakmeysammj.com/wp-content/uploads/2025/01/IMG_2025-01-19-145235.jpeg",
+      "description": "great",
+      "id": "2"
+    },
+    {
+      "category":"کاپشن",
+      "title": "Sample Product",
+      "Price": "59",
+      "image": "https://poshakmeysammj.com/wp-content/uploads/2024/12/photo_2024-11-14_06-54-08.jpg",
+      "description": "great",
+      "id": "7"
+    },
+    {
+      "category":"دورس",
+      "title": "Sample Product",
+      "Price": "57",
+      "image": "https://poshakmeysammj.com/wp-content/uploads/2024/11/photo_2024-11-14_02-06-03.jpg",
+      "description": "great",
+      "id": "8"
+    }
+   
+  ],
+  "storpe": [
+    {
+      "id": "1",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
+      "title": "عنوان محصول 1",
+      "description": "این یک توضیح کوتاه در مورد محصول است. برای ارائه یک نمای کلی طراحی شده است.",
+      "Price": 1200000
+    },
+    {
+      "id": "2",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
+      "title": "عنوان محصول 2",
+      "description": "این یک توضیح کوتاه در مورد محصول است. برای ارائه یک نمای کلی طراحی شده است.",
+      "Price": 1200000
+    },
+    {
+      "id": "3",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
+      "title": "عنوان محصول 3",
+      "description": "این یک توضیح کوتاه در مورد محصول است. برای ارائه یک نمای کلی طراحی شده است.",
+      "Price": 1200000
+    },
+    {
+      "id": "4",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
+      "title": "عنوان محصول 4",
+      "description": "این یک توضیح کوتاه در مورد محصول است. برای ارائه یک نمای کلی طراحی شده است.",
+      "Price": 1200000
+    },
+    {
+      "id": "5",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
+      "title": "عنوان محصول 5",
+      "description": "این یک توضیح کوتاه در مورد محصول است. برای ارائه یک نمای کلی طراحی شده است.",
+      "Price": 1200000
+    },
+    {
+      "id": "6",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
+      "title": "عنوان محصول 6",
+      "description": "این یک توضیح کوتاه در مورد محصول است. برای ارائه یک نمای کلی طراحی شده است.",
+      "Price": 1200000
+    },
+    {
+      "id": "7",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
+      "title": "عنوان محصول 7",
+      "description": "این یک توضیح کوتاه در مورد محصول است. برای ارائه یک نمای کلی طراحی شده است.",
+      "Price": 1200000
+    },
+    {
+      "id": "8",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
+      "title": "عنوان محصول 8",
+      "description": "این یک توضیح کوتاه در مورد محصول است. برای ارائه یک نمای کلی طراحی شده است.",
+      "Price": 1200000
+    }
+  ],
+  "takhfif":[
+    {
+      "id":1,
+      "image":"https://poshakmeysammj.com/wp-content/uploads/2025/01/IMG_2025-01-19-144518.jpeg",
+      "title":"کت جین داخل خز1104",
+      "redprice":1500000,
+      "greenprice":1200000 
+    },
+    {
+      "id":2,
+      "image":"https://poshakmeysammj.com/wp-content/uploads/2025/01/photo_2025-01-11_13-32-20.jpg",
+      "title":"پیراهن کنفی ۱۰۵۷",
+      "redprice":1200000,
+      "greenprice":950000  
+    },
+    {
+      "id":3,
+      "title":"پیراهن آستین کوتاه1150",
+      "image":"https://poshakmeysammj.com/wp-content/uploads/2024/12/photo_2024-11-14_06-54-08.jpg",
+      "redprice":2000000,
+      "greenprice":1500000
+      
+    },
+    {
+      "id":4,
+      "title":"تیبشرت افکت دار B",
+      "image":"https://poshakmeysammj.com/wp-content/uploads/2025/01/IMG_2025-01-19-145235.jpeg",
+      "redprice":500000,
+      "greenprice":350000
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "name": "عرفان جلیلیان ",
+      "email": "erfanjaliliyan83@gmail.com",
+      "password": "1383",
+      "addresses": [
+        "تهران، خیابان ستارخان",
+        "تهران خیابان  هاشمی"
+      ],
+      "payments": [
         {
-            "id":"1",
-            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
-            "title":"Sample Product",
-            "description":"This is a short description of the product. It is designed to give a quick overview.",
-            "Price":"$29.99"
-
+          "amount": 2500000,
+          "date": "2024-02-25"
         },
         {
-            "id":"2",
-            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
-            "title":"Sample Product",
-            "description":"This is a short description of the product. It is designed to give a quick overview.",
-            "Price":"$29.99"
-
-        },
-        {
-            "id":"3",
-            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
-            "title":"Sample Product",
-            "description":"This is a short description of the product. It is designed to give a quick overview.",
-            "Price":"$29.99"
-
-        },
-        {
-            "id":"4",
-            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
-            "title":"Sample Product",
-            "description":"This is a short description of the product. It is designed to give a quick overview.",
-            "Price":"$40.00"
-
-        },
-        {
-            "id":"5",
-            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
-            "title":"Sample Product",
-            "description":"This is a short description of the product. It is designed to give a quick overview.",
-            "Price":"$21.99"
-
-        },
-        {
-            "id":"6",
-            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
-            "title":"Sample Product",
-            "description":"This is a short description of the product. It is designed to give a quick overview.",
-            "Price":"$29.99"
-
-        },
-        {
-            "id":"7",
-            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
-            "title":"Sample Product",
-            "description":"This is a short description of the product. It is designed to give a quick overview.",
-            "Price":"$29.99"
-
-        },
-        {
-            "id":"8",
-            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
-            "title":"Sample Product",
-            "description":"This is a short description of the product. It is designed to give a quick overview.",
-            "Price":"$29.99"
-
+          "amount": 1800000,
+          "date": "2024-01-10"
         }
-    ],
-    "storpe":[
+      ],
+      "orders": [
         {
-            "id":"1",
-            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
-            "title":"عنوان محصول 1",
-            "description":"این یک توضیح کوتاه در مورد محصول است. برای ارائه یک نمای کلی طراحی شده است.",
-            "Price":"1200000 هزار تومان"
+          "id": 101,
+          "status": "تحویل شده",
+          "total": 320000
         },
         {
-            "id":"2",
-            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
-            "title":"عنوان محصول 2",
-            "description":"این یک توضیح کوتاه در مورد محصول است. برای ارائه یک نمای کلی طراحی شده است.",
-            "Price":"1200000 هزار تومان"
-        },
-        {
-            "id":"3",
-            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
-            "title":"عنوان محصول 3",
-            "description":"این یک توضیح کوتاه در مورد محصول است. برای ارائه یک نمای کلی طراحی شده است.",
-            "Price":"1200000 هزار تومان"
-        },
-        {
-            "id":"4",
-            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
-            "title":"عنوان محصول 4",
-            "description":"این یک توضیح کوتاه در مورد محصول است. برای ارائه یک نمای کلی طراحی شده است.",
-            "Price":"1200000 هزار تومان"
-        },
-        {
-            "id":"5",
-            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
-            "title":"عنوان محصول 5",
-            "description":"این یک توضیح کوتاه در مورد محصول است. برای ارائه یک نمای کلی طراحی شده است.",
-            "Price":"1200000 هزار تومان"
-        },
-        {
-            "id":"6",
-            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
-            "title":"عنوان محصول 6",
-            "description":"این یک توضیح کوتاه در مورد محصول است. برای ارائه یک نمای کلی طراحی شده است.",
-            "Price":"1200000 هزار تومان"
-        },
-        {
-            "id":"7",
-            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
-            "title":"عنوان محصول 7",
-            "description":"این یک توضیح کوتاه در مورد محصول است. برای ارائه یک نمای کلی طراحی شده است.",
-            "Price":"1200000 هزار تومان"
-        },
-        {
-            "id":"8",
-            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
-            "title":"عنوان محصول 8",
-            "description":"این یک توضیح کوتاه در مورد محصول است. برای ارائه یک نمای کلی طراحی شده است.",
-            "Price":"1200000 هزار تومان"
+          "id": 102,
+          "status": "در حال پردازش",
+          "total": 450000
         }
-    ]
+      ],
+      "notifications": [
+        "تخفیف ویژه برای کاربران جدید",
+        "سفارش شماره ۱۰۲ در حال پردازش است"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "علی رضایی",
+      "email": "ali@example.com",
+      "password": "123456",
+      "addresses": [
+        "تهران، خیابان آزادی",
+        "اصفهان، خیابان چهار باغ"
+      ],
+      "payments": [
+        {
+          "amount": 2500000,
+          "date": "2024-02-25"
+        },
+        {
+          "amount": 1800000,
+          "date": "2024-01-10"
+        }
+      ],
+      "orders": [
+        {
+          "id": 101,
+          "status": "تحویل شده",
+          "total": 320000
+        },
+        {
+          "id": 102,
+          "status": "در حال پردازش",
+          "total": 450000
+        }
+      ],
+      "notifications": [
+        "تخفیف ویژه برای کاربران جدید",
+        "سفارش شماره ۱۰۲ در حال پردازش است"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "علی رضایی",
+      "email": "ali@example.com",
+      "password": "123456",
+      "addresses": [
+        "تهران، خیابان آزادی",
+        "اصفهان، خیابان چهار باغ"
+      ],
+      "payments": [
+        {
+          "amount": 2500000,
+          "date": "2024-02-25"
+        },
+        {
+          "amount": 1800000,
+          "date": "2024-01-10"
+        }
+      ],
+      "orders": [
+        {
+          "id": 101,
+          "status": "تحویل شده",
+          "total": 320000
+        },
+        {
+          "id": 102,
+          "status": "در حال پردازش",
+          "total": 450000
+        }
+      ],
+      "notifications": [
+        "تخفیف ویژه برای کاربران جدید",
+        "سفارش شماره ۱۰۲ در حال پردازش است"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "علی رضایی",
+      "email": "ali@example.com",
+      "password": "123456",
+      "addresses": [
+        "تهران، خیابان آزادی",
+        "اصفهان، خیابان چهار باغ"
+      ],
+      "payments": [
+        {
+          "amount": 2500000,
+          "date": "2024-02-25"
+        },
+        {
+          "amount": 1800000,
+          "date": "2024-01-10"
+        }
+      ],
+      "orders": [
+        {
+          "id": 101,
+          "status": "تحویل شده",
+          "total": 320000
+        },
+        {
+          "id": 102,
+          "status": "در حال پردازش",
+          "total": 450000
+        }
+      ],
+      "notifications": [
+        "تخفیف ویژه برای کاربران جدید",
+        "سفارش شماره ۱۰۲ در حال پردازش است"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "علی رضایی",
+      "email": "ali@example.com",
+      "password": "123456",
+      "addresses": [
+        "تهران، خیابان آزادی",
+        "اصفهان، خیابان چهار باغ"
+      ],
+      "payments": [
+        {
+          "amount": 2500000,
+          "date": "2024-02-25"
+        },
+        {
+          "amount": 1800000,
+          "date": "2024-01-10"
+        }
+      ],
+      "orders": [
+        {
+          "id": 101,
+          "status": "تحویل شده",
+          "total": 320000
+        },
+        {
+          "id": 102,
+          "status": "در حال پردازش",
+          "total": 450000
+        }
+      ],
+      "notifications": [
+        "تخفیف ویژه برای کاربران جدید",
+        "سفارش شماره ۱۰۲ در حال پردازش است"
+      ]
+    }
+   
+  ]
 }

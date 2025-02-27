@@ -1,11 +1,11 @@
 "use client"
 
 import { useContext, useState } from "react";
-import {myContext} from "../../context/myContext"
+
 
 
 export default function button(){
-  const { user, setuser } =useContext(myContext)
+
 
     const[quantity,setquantity]=useState(1)
 
