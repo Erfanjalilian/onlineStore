@@ -22,9 +22,14 @@ function navbar(){
             title:"Store"
         },
         {
-            href:"/AdminPanel",
-            title:"AdminPanel"
+            href:"/AboutUs",
+            title:"About Us"
+        },
+        {
+            href:"/CallUs",
+            title:"Call Us"
         }
+      
     ]
     const headerHande2=[
         {
@@ -34,11 +39,8 @@ function navbar(){
         {
             href:"/store",
             title:"فروشگاه"
-        },
-        {
-            href:"/AdminPanel",
-            title:"پنل کاربری"
         }
+       
 
     ]
     return(

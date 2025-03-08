@@ -22,11 +22,16 @@ export default function LoginPage() {
       if (users.length > 0) {
         const user = users[0]; // دریافت اولین کاربر (چون ایمیل منحصربه‌فرد است)
 
-        // ذخیره فقط `userId` در localStorage
+        // ذخیره فقط `userId` و `role` در localStorage
         localStorage.setItem('userId', user.id);
+        localStorage.setItem('role', user.role);  // نقش کاربر را ذخیره می‌کنیم
 
-        // هدایت به داشبورد
-        router.push('/UserDashboard');
+        // هدایت به صفحه‌ی مناسب بر اساس نقش
+        if (user.role === 'admin') {
+          router.push('/dashbordAdmin9876'); // اگر مدیر است، به داشبورد مدیریت هدایت می‌شود
+        } else {
+          router.push('/UserDashboard'); // اگر کاربر عادی است، به داشبورد کاربری هدایت می‌شود
+        }
       } else {
         setError('ایمیل یا رمز عبور نادرست است.');
       }

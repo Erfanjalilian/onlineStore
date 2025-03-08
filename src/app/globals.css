@@ -1,4 +1,176 @@
+/* styles/globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  /* استایل‌های صفحه درباره ما */
+  .about-container {
+    @apply bg-gray-50 text-gray-800 min-h-screen flex flex-col items-center justify-center py-8;
+  }
+
+  .hero-section {
+    @apply text-center py-16 px-8 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-lg shadow-xl mb-16;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  .title {
+    @apply text-4xl font-bold mb-4;
+    animation: slideUp 1s ease-in-out;
+  }
+
+  .subtitle {
+    @apply text-xl opacity-80 mb-6;
+    animation: slideUp 1.5s ease-in-out;
+  }
+
+  .story-section {
+    @apply text-center px-6 py-8 bg-white rounded-lg shadow-lg mb-16 max-w-4xl w-full;
+    animation: fadeIn 3s ease-in-out;
+  }
+
+  .story-text {
+    @apply text-lg text-gray-700 leading-relaxed;
+  }
+
+  .section-title {
+    @apply text-3xl font-semibold text-center mb-12 text-gray-900;
+  }
+
+  .team-section {
+    @apply flex flex-col items-center justify-center px-6 py-8;
+  }
+
+  .team-members {
+    @apply flex gap-12 flex-wrap justify-center;
+  }
+
+  .team-member {
+    @apply bg-white rounded-lg shadow-lg p-6 text-center w-64 hover:scale-105 transition-transform duration-300 ease-in-out;
+    animation: fadeIn 3s ease-in-out;
+  }
+
+  .team-image {
+    @apply rounded-full w-32 h-32 mx-auto mb-4 border-4 border-gray-300;
+  }
+
+  .team-name {
+    @apply text-xl font-semibold mb-2;
+  }
+
+  .team-role {
+    @apply text-gray-500;
+  }
+
+  /* Keyframes for animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* استایل‌های جدید صفحه تماس با ما */
+  .contact-container {
+    @apply bg-gray-50 text-gray-800 min-h-screen flex flex-col items-center justify-center py-8;
+  }
+
+  .contact-hero-section {
+    @apply text-center py-16 px-8 bg-gradient-to-r from-teal-400 to-blue-600 text-white rounded-lg shadow-xl mb-16;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  .contact-title {
+    @apply text-4xl font-bold mb-4;
+    animation: slideUp 1s ease-in-out;
+  }
+
+  .contact-subtitle {
+    @apply text-xl opacity-80 mb-6;
+    animation: slideUp 1.5s ease-in-out;
+  }
+
+  .contact-info-section {
+    @apply text-center px-6 py-8 bg-white rounded-lg shadow-lg mb-16 max-w-4xl w-full;
+    animation: fadeIn 3s ease-in-out;
+  }
+
+  .contact-info {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+  }
+
+  .info-item {
+    @apply mb-6;
+  }
+
+  .info-title {
+    @apply text-xl font-semibold mb-2 text-gray-700;
+  }
+
+  .info-text {
+    @apply text-gray-500;
+  }
+
+  .contact-form-section {
+    @apply text-center px-6 py-8 bg-white rounded-lg shadow-lg mb-16 max-w-4xl w-full;
+    animation: fadeIn 3s ease-in-out;
+  }
+
+  .contact-form {
+    @apply space-y-6;
+  }
+
+  .form-group {
+    @apply flex flex-col items-start;
+  }
+
+  .form-label {
+    @apply text-lg font-semibold mb-2 text-gray-700;
+  }
+
+  .form-input, .form-textarea {
+    @apply w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500;
+  }
+
+  .form-textarea {
+    @apply h-32 resize-none;
+  }
+
+  .submit-button {
+    @apply bg-teal-500 text-white px-6 py-3 rounded-lg hover:bg-teal-600 transition duration-200;
+  }
+
+  /* Keyframes for animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}

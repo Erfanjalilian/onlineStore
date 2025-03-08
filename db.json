@@ -1,38 +1,29 @@
 {
   "store": [
     {
-      "category":"شلوار",
-      "title": "Sample Product",
-      "Price": "69",
-      "image": "https://poshakmeysammj.com/wp-content/uploads/2025/01/IMG_2025-01-19-144518.jpeg",
-      "description": "great",
+      "category": "کاپشن",
+      "title": "kaption",
+      "Price": "101",
+      "description": "this is the great kaption",
+      "image": "https://poshakmeysammj.com/wp-content/uploads/2024/12/photo_2024-11-14_06-54-08.jpg",
       "id": "1"
     },
     {
-      "category":"تی شرت",
-      "title": "Sample Product",
-      "Price": "67",
-      "image": "https://poshakmeysammj.com/wp-content/uploads/2025/01/IMG_2025-01-19-145235.jpeg",
-      "description": "great",
+      "title": "shortevarzeshi",
+      "price": "123400",
+      "description": "this is the shortevarzeshi",
+      "image": "https://poshakmeysammj.com/wp-content/uploads/2024/12/photo_2024-11-14_06-54-08.jpg",
+      "Price": "222",
       "id": "2"
     },
     {
-      "category":"کاپشن",
-      "title": "Sample Product",
-      "Price": "59",
-      "image": "https://poshakmeysammj.com/wp-content/uploads/2024/12/photo_2024-11-14_06-54-08.jpg",
-      "description": "great",
-      "id": "7"
-    },
-    {
-      "category":"دورس",
-      "title": "Sample Product",
-      "Price": "57",
-      "image": "https://poshakmeysammj.com/wp-content/uploads/2024/11/photo_2024-11-14_02-06-03.jpg",
-      "description": "great",
-      "id": "8"
+      "category": "دورس",
+      "title": "joorabe mardane",
+      "Price": "400",
+      "image": "https://www.sarabara.com/wp-content/uploads/2025/01/socks-vk599-bk02-1.jpg",
+      "description": "this is joorabe mardane",
+      "id": "4"
     }
-   
   ],
   "storpe": [
     {
@@ -50,11 +41,11 @@
       "Price": 1200000
     },
     {
-      "id": "3",
+      "title": "عرفان",
+      "price": "7",
+      "description": "سلام من عرفان جلیلیان هستم",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
-      "title": "عنوان محصول 3",
-      "description": "این یک توضیح کوتاه در مورد محصول است. برای ارائه یک نمای کلی طراحی شده است.",
-      "Price": 1200000
+      "id": "3"
     },
     {
       "id": "4",
@@ -92,46 +83,53 @@
       "Price": 1200000
     }
   ],
-  "takhfif":[
+  "takhfif": [
     {
-      "id":1,
-      "image":"https://poshakmeysammj.com/wp-content/uploads/2025/01/IMG_2025-01-19-144518.jpeg",
-      "title":"کت جین داخل خز1104",
-      "redprice":1500000,
-      "greenprice":1200000 
+      "id": "1",
+      "image": "https://poshakmeysammj.com/wp-content/uploads/2025/01/IMG_2025-01-19-144518.jpeg",
+      "title": "کت جین داخل خز1104",
+      "redprice": 1500000,
+      "greenprice": 1200000
     },
     {
-      "id":2,
-      "image":"https://poshakmeysammj.com/wp-content/uploads/2025/01/photo_2025-01-11_13-32-20.jpg",
-      "title":"پیراهن کنفی ۱۰۵۷",
-      "redprice":1200000,
-      "greenprice":950000  
+      "id": "2",
+      "image": "https://poshakmeysammj.com/wp-content/uploads/2025/01/photo_2025-01-11_13-32-20.jpg",
+      "title": "پیراهن کنفی ۱۰۵۷",
+      "redprice": 1200000,
+      "greenprice": 950000
     },
     {
-      "id":3,
-      "title":"پیراهن آستین کوتاه1150",
-      "image":"https://poshakmeysammj.com/wp-content/uploads/2024/12/photo_2024-11-14_06-54-08.jpg",
-      "redprice":2000000,
-      "greenprice":1500000
-      
+      "id": "3",
+      "title": "پیراهن آستین کوتاه1150",
+      "image": "https://poshakmeysammj.com/wp-content/uploads/2024/12/photo_2024-11-14_06-54-08.jpg",
+      "redprice": 2000000,
+      "greenprice": 1500000
     },
     {
-      "id":4,
-      "title":"تیبشرت افکت دار B",
-      "image":"https://poshakmeysammj.com/wp-content/uploads/2025/01/IMG_2025-01-19-145235.jpeg",
-      "redprice":500000,
-      "greenprice":350000
+      "id": "4",
+      "title": "تیبشرت افکت دار B",
+      "image": "https://poshakmeysammj.com/wp-content/uploads/2025/01/IMG_2025-01-19-145235.jpeg",
+      "redprice": 500000,
+      "greenprice": 350000
     }
   ],
   "user": [
     {
-      "id": 1,
-      "name": "عرفان جلیلیان ",
-      "email": "erfanjaliliyan83@gmail.com",
-      "password": "1383",
+      "id": "1",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "role": "user",
+      "name": "ابراهیم نیکنام",
+      "email": "ebrahim60@gmail.com",
+      "phone": "09029656301",
+      "password": "234567812345",
+      "id": "2",
       "addresses": [
-        "تهران، خیابان ستارخان",
-        "تهران خیابان  هاشمی"
+        "تهران، خیابان آزادی",
+        "اصفهان، خیابان چهار باغ"
       ],
       "payments": [
         {
@@ -161,9 +159,87 @@
       ]
     },
     {
-      "id": 2,
+      "role": "user",
+      "id": "3",
+      "name": "فربد",
+      "email": "erfanjalilian995@gmail.com",
+      "phone": "09029656301",
+      "password": "13831234",
+      "addresses": [
+        "تهران، خیابان آزادی",
+        "اصفهان، خیابان چهار باغ"
+      ],
+      "payments": [
+        {
+          "amount": 2500000,
+          "date": "2024-02-25"
+        },
+        {
+          "amount": 1800000,
+          "date": "2024-01-10"
+        }
+      ],
+      "orders": [
+        {
+          "id": 101,
+          "status": "تحویل شده",
+          "total": 320000
+        },
+        {
+          "id": 102,
+          "status": "در حال پردازش",
+          "total": 450000
+        }
+      ],
+      "notifications": [
+        "تخفیف ویژه برای کاربران جدید",
+        "سفارش شماره ۱۰۲ در حال پردازش است"
+      ]
+    },
+    {
+      "role": "user",
+      "id": "4",
+      "name": "آریو رحمانی ",
+      "email": "erfanjaliliyan99@gmail.com",
+      "phone": "09029656301",
+      "password": "13831234",
+      "addresses": [
+        "تهران، خیابان آزادی",
+        "اصفهان، خیابان چهار باغ"
+      ],
+      "payments": [
+        {
+          "amount": 2500000,
+          "date": "2024-02-25"
+        },
+        {
+          "amount": 1800000,
+          "date": "2024-01-10"
+        }
+      ],
+      "orders": [
+        {
+          "id": 101,
+          "status": "تحویل شده",
+          "total": 320000
+        },
+        {
+          "id": 102,
+          "status": "در حال پردازش",
+          "total": 450000
+        }
+      ],
+      "notifications": [
+        "تخفیف ویژه برای کاربران جدید",
+        "سفارش شماره ۱۰۲ در حال پردازش است"
+      ]
+    },
+    {
+      "role": "user",
+      "id": "5",
       "name": "علی رضایی",
       "email": "ali@example.com",
+      "phone": "09029656301",
       "password": "123456",
       "addresses": [
         "تهران، خیابان آزادی",
@@ -197,9 +273,11 @@
       ]
     },
     {
-      "id": 3,
+      "role": "user",
+      "id": "6",
       "name": "علی رضایی",
       "email": "ali@example.com",
+      "phone": "09029656301",
       "password": "123456",
       "addresses": [
         "تهران، خیابان آزادی",
@@ -233,77 +311,11 @@
       ]
     },
     {
-      "id": 4,
-      "name": "علی رضایی",
-      "email": "ali@example.com",
-      "password": "123456",
-      "addresses": [
-        "تهران، خیابان آزادی",
-        "اصفهان، خیابان چهار باغ"
-      ],
-      "payments": [
-        {
-          "amount": 2500000,
-          "date": "2024-02-25"
-        },
-        {
-          "amount": 1800000,
-          "date": "2024-01-10"
-        }
-      ],
-      "orders": [
-        {
-          "id": 101,
-          "status": "تحویل شده",
-          "total": 320000
-        },
-        {
-          "id": 102,
-          "status": "در حال پردازش",
-          "total": 450000
-        }
-      ],
-      "notifications": [
-        "تخفیف ویژه برای کاربران جدید",
-        "سفارش شماره ۱۰۲ در حال پردازش است"
-      ]
-    },
-    {
-      "id": 5,
-      "name": "علی رضایی",
-      "email": "ali@example.com",
-      "password": "123456",
-      "addresses": [
-        "تهران، خیابان آزادی",
-        "اصفهان، خیابان چهار باغ"
-      ],
-      "payments": [
-        {
-          "amount": 2500000,
-          "date": "2024-02-25"
-        },
-        {
-          "amount": 1800000,
-          "date": "2024-01-10"
-        }
-      ],
-      "orders": [
-        {
-          "id": 101,
-          "status": "تحویل شده",
-          "total": 320000
-        },
-        {
-          "id": 102,
-          "status": "در حال پردازش",
-          "total": 450000
-        }
-      ],
-      "notifications": [
-        "تخفیف ویژه برای کاربران جدید",
-        "سفارش شماره ۱۰۲ در حال پردازش است"
-      ]
+      "role": "user",
+      "id": "86aa",
+      "fullName": "اسلام نیکنام",
+      "email": "eslamniknam@gmail.com",
+      "password": "1234512345"
     }
-   
   ]
 }

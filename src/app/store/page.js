@@ -60,8 +60,8 @@ function Store() {
                     </div>
 
                     {/* فیلتر محصولات */}
-                    <div className="w-3/12 ml-5">
-                        <Filters onFilterChange={handleFilterChange} />
+                   <div className="w-3/12 ml-5">
+                       <Filters onFilterChange={handleFilterChange} />
                     </div>
                 </div>
             </div>

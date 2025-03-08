@@ -1,23 +1,33 @@
-"use client"
+"use client";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation"; // برای هدایت به صفحه‌ی خطای 403
 
-export default function AdminPanel() {
+export default function dashbordAdmin9876() {
   const [products, setProducts] = useState([]); // لیست محصولات
-  const [title, settitle] = useState("");
+  const [title, setTitle] = useState("");
   const [Price, setPrice] = useState("");
-  const [image, setimage] = useState("");
-  const [description, setdescription] = useState("");
+  const [image, setImage] = useState("");
+  const [description, setDescription] = useState("");
   const [editId, setEditId] = useState(null); // برای ذخیره ID محصول در حال ویرایش
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
+  const router = useRouter(); // برای هدایت به صفحه‌ی 403
 
-  // 📌 دریافت محصولات از API
+  // 📌 بررسی نقش کاربر
   useEffect(() => {
-    fetch("http://localhost:3000/store") // آدرس API را تنظیم کن
-      .then((res) => res.json())
-      .then((data) => setProducts(data))
-      .catch((err) => console.error("خطا در دریافت محصولات:", err));
-  }, []);
+    const role = localStorage.getItem("role"); // نقش کاربر را از localStorage می‌خوانیم
+
+    if (role !== "admin") {
+      // اگر نقش کاربر "admin" نیست، هدایت به صفحه‌ی 403
+      router.push("/403");
+    } else {
+      // اگر نقش "admin" است، اطلاعات محصولات را بارگذاری می‌کنیم
+      fetch("http://localhost:3000/store") // آدرس API را تنظیم کن
+        .then((res) => res.json())
+        .then((data) => setProducts(data))
+        .catch((err) => console.error("خطا در دریافت محصولات:", err));
+    }
+  }, [router]); // توجه: وقتی که صفحه رندر می‌شود، چک می‌کند که نقش "admin" هست یا خیر
 
   // 📌 تابع ارسال محصول (افزودن / ویرایش)
   const handleSubmit = async (e) => {
@@ -75,19 +85,19 @@ export default function AdminPanel() {
   // 📌 مقداردهی فرم برای ویرایش محصول
   const handleEdit = (product) => {
     setEditId(product.id);
-    settitle(product.title);
+    setTitle(product.title);
     setPrice(product.Price);
-    setimage(product.image);
-    setdescription(product.description);
+    setImage(product.image);
+    setDescription(product.description);
   };
 
   // 📌 ریست کردن فرم
   const resetForm = () => {
     setEditId(null);
-    settitle("");
+    setTitle("");
     setPrice("");
-    setimage("");
-    setdescription("");
+    setImage("");
+    setDescription("");
   };
 
   return (
@@ -103,7 +113,7 @@ export default function AdminPanel() {
           type="text"
           placeholder="نام محصول"
           value={title}
-          onChange={(e) => setName(e.target.value)}
+          onChange={(e) => setTitle(e.target.value)}
           required
           className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
         />
@@ -119,14 +129,14 @@ export default function AdminPanel() {
           type="text"
           placeholder="لینک تصویر محصول"
           value={image}
-          onChange={(e) => setimage(e.target.value)}
+          onChange={(e) => setImage(e.target.value)}
           required
           className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
         />
         <textarea
           placeholder="توضیحات محصول"
           value={description}
-          onChange={(e) => setdescription(e.target.value)}
+          onChange={(e) => setDescription(e.target.value)}
           required
           className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
         />
