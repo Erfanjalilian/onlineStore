@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { Link } from 'react-router-dom';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -77,7 +78,13 @@ export default function LoginPage() {
             {loading ? 'در حال ورود...' : 'ورود'}
           </button>
         </form>
+        <br />
+         <h2 className='text-center text-lg'>حساب کابری نداری ؟</h2>
+         <div className='text-center'>
+           <a className='text-blue-500 underline' href="/SignupPage">ایجاد حساب کاربری</a>
+         </div>
       </div>
+     
     </div>
   );
 }

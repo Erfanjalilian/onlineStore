@@ -23,6 +23,23 @@
       "image": "https://www.sarabara.com/wp-content/uploads/2025/01/socks-vk599-bk02-1.jpg",
       "description": "this is joorabe mardane",
       "id": "4"
+    },
+    {
+      "id": "2efb",
+      "title": "پیراهن جین",
+      "Price": "350",
+      "description": "یک پیراهن جین بسیار با کیفیت و عالی ",
+      "image": "https://poshakmeysammj.com/wp-content/uploads/2024/04/IMG_2024-04-21-180519.jpeg",
+      "category": "تی شرت"
+    },
+    {
+      "id": "ff4d",
+      "title": "تیشرت لش",
+      "Price": "289",
+      "description": "بهترین تی شرت لش بازار",
+      "image": "https://poshakmeysammj.com/wp-content/uploads/2024/03/IMG_2024-03-05-153451.jpeg",
+      "category": "تی شرت",
+      "": "g"
     }
   ],
   "storpe": [
@@ -198,44 +215,6 @@
     },
     {
       "role": "user",
-      "id": "4",
-      "name": "آریو رحمانی ",
-      "email": "erfanjaliliyan99@gmail.com",
-      "phone": "09029656301",
-      "password": "13831234",
-      "addresses": [
-        "تهران، خیابان آزادی",
-        "اصفهان، خیابان چهار باغ"
-      ],
-      "payments": [
-        {
-          "amount": 2500000,
-          "date": "2024-02-25"
-        },
-        {
-          "amount": 1800000,
-          "date": "2024-01-10"
-        }
-      ],
-      "orders": [
-        {
-          "id": 101,
-          "status": "تحویل شده",
-          "total": 320000
-        },
-        {
-          "id": 102,
-          "status": "در حال پردازش",
-          "total": 450000
-        }
-      ],
-      "notifications": [
-        "تخفیف ویژه برای کاربران جدید",
-        "سفارش شماره ۱۰۲ در حال پردازش است"
-      ]
-    },
-    {
-      "role": "user",
       "id": "5",
       "name": "علی رضایی",
       "email": "ali@example.com",
@@ -311,11 +290,10 @@
       ]
     },
     {
-      "role": "user",
-      "id": "86aa",
-      "fullName": "اسلام نیکنام",
-      "email": "eslamniknam@gmail.com",
-      "password": "1234512345"
+      "id": "de50",
+      "fullName": "عرفان جلیلیان ",
+      "email": "erfanjaliliyan83@gmail.com",
+      "password": "erfan jaliliyan831234"
     }
   ]
 }

@@ -50,9 +50,12 @@ export default function ProductsSection() {
     <section id="products" className="mb-8">
       <h2 className="text-xl font-bold mb-4 text-center">مدیریت محصولات</h2>
       <div className="bg-white p-6 rounded-lg shadow">
+        <Link href={"dashbordAdmin9876/addProduct"}>
         <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
           افزودن محصول
         </button>
+        </Link>
+       
         <table className="w-full mt-4">
           <thead>
             <tr className="bg-gray-200">
