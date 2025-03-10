@@ -7,6 +7,7 @@ import { MyLanguageProvider } from "../context/myLanguage";
 import {AuthProvider} from "../context/AuthContext"
 import Footer from "@/components/footer/footer";
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],

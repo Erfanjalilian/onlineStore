@@ -3,6 +3,7 @@ import React, { useContext, useState } from "react";
 import { MyLanguage } from "../../context/myLanguage";
 import Productitem from "../../components/productitem/productitem";
 import Filters from "../../components/Filters/Filters";
+import EndTheSection from "@/components/endTheSection/endTheSection";
 import Link from "next/link";
 
 function Store() {
@@ -39,12 +40,11 @@ function Store() {
 
     return (
         <div className="w-11/12 mx-auto">
+            <div className="bg-purple-500 text-white text-center h-80 pt-32 text-7xl">store</div>
+            <br /><br />
             <div className="">
-                {language === "en" ? (
-                    <h2 className="my-14">Store</h2>
-                ) : (
-                    <h2 className="my-14 text-right">فروشگاه</h2>
-                )}
+
+              
                 <div className="flex">
                     {/* لیست محصولات */}
                     <div className="w-9/12">
@@ -60,11 +60,14 @@ function Store() {
                     </div>
 
                     {/* فیلتر محصولات */}
-                   <div className="w-3/12 ml-5">
+                   <div className="md:w-3/12 ml-5">
                        <Filters onFilterChange={handleFilterChange} />
                     </div>
                 </div>
             </div>
+            <br /><br /><br /><br />
+            <EndTheSection />
+            <br /><br />
         </div>
     );
 }

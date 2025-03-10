@@ -12,21 +12,10 @@ export default function SlideInModal() {
 
 
 
-      <svg
-       onClick={() => setIsOpen(true)}
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className="w-10 h-10 bg-white text-blue-700"
-  >
-    <path d="M6 6h15l2 12H7L6 6z"></path>
-    <circle cx="9" cy="21" r="1"></circle>
-    <circle cx="20" cy="21" r="1"></circle>
-  </svg>
+     
+
+
+  <button onClick={() => setIsOpen(true)} className='text-white bg-blue-700 rounded py-2 px-4'>shopping cart</button>
 
 
 

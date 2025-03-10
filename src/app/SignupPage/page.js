@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from "next/navigation";
 
 export default function SignupPage() {
   // 1. تعریف وضعیت‌ها برای ورودی‌ها و خطاها
@@ -37,8 +38,10 @@ export default function SignupPage() {
       const data = await response.json();
 
       if (response.status === 201) {
+        window.location.href = '/LoginPage';
         // موفقیت در ثبت‌نام
-        alert('ثبت‌نام با موفقیت انجام شد!');
+        alert(' ثبت نام با موفقیت انجام شد لطفا در سایت لاگین کنید');
+
       } else {
         // ارور از سمت سرور
         setError(data.error || 'مشکلی پیش آمده است.');

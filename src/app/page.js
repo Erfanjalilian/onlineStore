@@ -4,6 +4,8 @@ import { useContext } from "react";
 import {MyLanguage} from "../context/myLanguage"
 
 
+
+
 async function Home() {
   const {language,setLanguage}=useContext(MyLanguage)
   const result=await fetch("http://localhost:3000/takhfif");
@@ -12,6 +14,7 @@ async function Home() {
   return (
     
      <div>
+    
    
       <div className="w-11/12 mx-auto">
           <img className="w-full h-96" src="https://netcopy.ir/wp-content/uploads/edd/2022/01/web-banner-sale.jpg" />
