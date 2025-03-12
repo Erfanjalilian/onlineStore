@@ -22,7 +22,7 @@ export function MyLanguageProvider({ children }) {
 
     fetchData();
   }, [language]); // اجرا شدن هنگام تغییر زبان
-  console.log(data)
+ 
 
   return (
     <MyLanguage.Provider value={{ language, setLanguage, data }}>

@@ -1,12 +1,11 @@
-"use client"
+"use client";
 import React from "react";
-import { useCart } from "../../context/CartContext "; // استفاده از کانتکست
+import { useCart } from "@/context/CartContext ";
 
 function Cart() {
-  const { cart, removeFromCart } = useCart(); // دریافت داده‌ها و تابع حذف از کانتکست
+  const { cart, removeFromCart, increaseQuantity, decreaseQuantity } = useCart();
 
-  // محاسبه مجموع قیمت‌ها
-  const totalPrice = cart.reduce((total, item) => total + parseFloat(item.Price), 0);
+  const totalPrice = cart.reduce((total, item) => total + item.Price * item.quantity, 0);
 
   if (cart.length === 0) {
     return <p>سبد خرید شما خالی است.</p>;
@@ -14,41 +13,31 @@ function Cart() {
 
   return (
     <div className="mx-auto w-11/12">
-      <h2 className="text-2xl font-semibold my-6">shopping cart</h2>
-      
-      {/* نمایش محصولات */}
+      <h2 className="text-2xl font-semibold my-6">Shopping Cart</h2>
+
       <div className="space-y-4">
         {cart.map((item) => (
-          <div key={item.id} className="cart-item flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-            <img src={item.image} alt={item.title} className="w-20 h-20 object-cover rounded-md" />
-            
+          <div key={item.id} className="flex items-center justify-between p-4 bg-white rounded-lg shadow-md">
+            <img src={item.image} className="w-20 h-20 rounded-md" />
             <div className="flex-1 ml-4">
-              <h3 className="text-xl font-semibold text-gray-800">{item.title}</h3>
-              <p className="text-sm text-gray-500">{item.description}</p>
-              <p className="text-lg font-semibold text-gray-900 mt-2">{item.Price} $</p>
+              <h3 className="text-xl">{item.title}</h3>
+              <p>{item.Price} $</p>
+              <div className="mt-9">
+            <button className="px-4 py-2 bg-red-700 text-white rounded" onClick={() => decreaseQuantity(item.id)}>-</button>
+            <span className="p-3">{item.quantity}</span>
+            <button className="px-4 py-2 bg-blue-700 text-white rounded" onClick={() => increaseQuantity(item.id)}>+</button>
             </div>
+            </div>
+           
 
-            <button
-              onClick={() => removeFromCart(item.id)} // حذف محصول از سبد خرید
-              className="text-white bg-red-500 hover:bg-red-600 rounded-lg px-4 py-2 transition-colors duration-300"
-            >
-              Delete
-            </button>
+            <button className="px-4 py-2 bg-red-700 text-white rounded" onClick={() => removeFromCart(item.id)}>Delete</button>
           </div>
         ))}
       </div>
 
-      {/* نمایش مجموع قیمت‌ها */}
-      <div className="mt-6">
-        <h3 className="text-xl font-semibold text-gray-800"> Total prices: <span className="text-2xl text-green-500">{totalPrice.toLocaleString()} $</span></h3>
-      </div>
+      <h3 className="text-green-900 mt-10 text-xl">Total Price: {totalPrice} $</h3>
 
-      {/* دکمه ادامه خرید */}
-      <div className="mt-8">
-        <button className="text-white bg-blue-700 hover:bg-blue-800 rounded-lg w-full pt-4 pb-4 transition-colors duration-300">
-          ادامه خرید
-        </button>
-      </div>
+      <button className="w-full bg-blue-600 text-white py-3 rounded mb-10 mt-10">Continue shopping</button>
     </div>
   );
 }

@@ -1,5 +1,4 @@
-// context/cartContext.js
-"use client"
+"use client";
 
 import React, { createContext, useContext, useState, useEffect } from "react";
 
@@ -20,26 +19,50 @@ export const CartProvider = ({ children }) => {
 
   // ذخیره‌سازی داده‌ها در localStorage
   useEffect(() => {
-    if (cart.length > 0) {
-      localStorage.setItem("cart", JSON.stringify(cart));
-    }
+    localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
-  // تابع برای افزودن محصول به سبد خرید
+  // افزودن محصول به سبد خرید (با مقدار `quantity` صحیح)
   const addToCart = (product) => {
     setCart((prevCart) => {
-      const updatedCart = [...prevCart, product];
-      return updatedCart;
+      const existingProduct = prevCart.find((item) => item.id === product.id);
+      if (existingProduct) {
+        return prevCart.map((item) =>
+          item.id === product.id ? { ...item, quantity: item.quantity + product.quantity } : item
+        );
+      } else {
+        return [...prevCart, { ...product }];
+      }
     });
   };
 
-  // تابع برای حذف محصول از سبد خرید
+  // حذف محصول از سبد خرید
   const removeFromCart = (productId) => {
     setCart((prevCart) => prevCart.filter((item) => item.id !== productId));
   };
 
+  // افزایش تعداد محصول
+  const increaseQuantity = (productId) => {
+    setCart((prevCart) =>
+      prevCart.map((item) =>
+        item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
+      )
+    );
+  };
+
+  // کاهش تعداد محصول
+  const decreaseQuantity = (productId) => {
+    setCart((prevCart) =>
+      prevCart.map((item) =>
+        item.id === productId && item.quantity > 1
+          ? { ...item, quantity: item.quantity - 1 }
+          : item
+      )
+    );
+  };
+
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, increaseQuantity, decreaseQuantity }}>
       {children}
     </CartContext.Provider>
   );
