@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { useCart } from "@/context/CartContext ";
+import Link from "next/link";
 
 function Cart() {
   const { cart, removeFromCart, increaseQuantity, decreaseQuantity } = useCart();
@@ -35,9 +36,13 @@ function Cart() {
         ))}
       </div>
 
-      <h3 className="text-green-900 mt-10 text-xl">Total Price: {totalPrice} $</h3>
+      
 
+      <h3 className="text-green-900 mt-10 text-xl">Total Price: {totalPrice} $</h3>
+      
+      <Link href={"/Checkout"}>
       <button className="w-full bg-blue-600 text-white py-3 rounded mb-10 mt-10">Continue shopping</button>
+      </Link>
     </div>
   );
 }
