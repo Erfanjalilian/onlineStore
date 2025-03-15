@@ -1,28 +1,28 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from "next/navigation";
 
 export default function SignupPage() {
-  // 1. تعریف وضعیت‌ها برای ورودی‌ها و خطاها
-  const [fullName, setFullName] = useState('');
+  // وضعیت‌ها برای ورودی‌ها و خطاها
+  const [name, setFullName] = useState('');
   const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState(''); // اضافه شدن فیلد شماره تماس
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  // 2. ارسال اطلاعات به API
+  // ارسال اطلاعات به API
   const handleSignup = async (e) => {
     e.preventDefault();
 
-    // 3. بررسی همخوانی رمز عبور
+    // بررسی همخوانی رمز عبور
     if (password !== confirmPassword) {
       setError('رمز عبور و تکرار آن یکسان نیستند.');
       return;
     }
 
-    // 4. شروع به لود کردن داده‌ها
+    // شروع به لود کردن داده‌ها
     setLoading(true);
     setError(null);
 
@@ -32,18 +32,21 @@ export default function SignupPage() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ fullName, email, password }),
+        body: JSON.stringify({
+          name,
+          email,
+          phone, // ارسال شماره تماس به API
+          password,
+          role: "user", // مقدار ثابت برای نقش کاربر
+        }),
       });
 
       const data = await response.json();
 
       if (response.status === 201) {
         window.location.href = '/LoginPage';
-        // موفقیت در ثبت‌نام
-        alert(' ثبت نام با موفقیت انجام شد لطفا در سایت لاگین کنید');
-
+        alert('ثبت نام با موفقیت انجام شد لطفا در سایت لاگین کنید');
       } else {
-        // ارور از سمت سرور
         setError(data.error || 'مشکلی پیش آمده است.');
       }
     } catch (err) {
@@ -59,11 +62,11 @@ export default function SignupPage() {
         <h2 className="text-2xl font-bold text-center mb-4">ایجاد حساب کاربری</h2>
         <form onSubmit={handleSignup} className="space-y-4">
           {error && <div className="text-red-500 text-center mb-4">{error}</div>}
-          
+
           <input
             type="text"
             placeholder="نام و نام خانوادگی"
-            value={fullName}
+            value={name}
             onChange={(e) => setFullName(e.target.value)}
             className="w-full p-2 border rounded-md"
           />
@@ -72,6 +75,13 @@ export default function SignupPage() {
             placeholder="ایمیل"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            className="w-full p-2 border rounded-md"
+          />
+          <input
+            type="text"
+            placeholder="شماره تماس"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
             className="w-full p-2 border rounded-md"
           />
           <input
@@ -88,7 +98,7 @@ export default function SignupPage() {
             onChange={(e) => setConfirmPassword(e.target.value)}
             className="w-full p-2 border rounded-md"
           />
-          
+
           <button
             type="submit"
             disabled={loading}

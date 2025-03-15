@@ -290,28 +290,48 @@
       ]
     },
     {
+      "role": "user",
       "id": "de50",
       "fullName": "عرفان جلیلیان ",
       "email": "erfanjaliliyan83@gmail.com",
       "password": "erfan jaliliyan831234"
     },
     {
+      "role": "user",
       "id": "8bc9",
       "fullName": "پرهام مقصودلو",
       "email": "parham70@gamil.com",
       "password": "1234"
     },
     {
+      "role": "user",
       "id": "248c",
       "fullName": "ماهان رضا",
       "email": "mahanreza@gmail.com",
       "password": "12345567"
     },
     {
+      "role": "user",
       "id": "fa94",
       "fullName": "بوگ آقا قیصر انزابی",
       "email": "bgamzabi.rpya@gamil.com",
       "password": "Sandali"
+    },
+    {
+      "role": "user",
+      "id": "b9dd",
+      "name": "حبیب قیصر انزابی",
+      "email": "www.habibgheasar@gmail.com",
+      "phone": "09029656301",
+      "password": "1234"
+    },
+    {
+      "id": "d0db",
+      "name": "محمدضا اذانگو",
+      "email": "www.mohamad79@gmail.com",
+      "phone": "09213570388",
+      "role": "user",
+      "password": "123456789"
     }
   ]
 }

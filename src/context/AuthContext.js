@@ -7,7 +7,10 @@ const AuthContext = createContext();
 
 // کامپوننت Provider برای کانتکس
 export const AuthProvider = ({ children }) => {
+  const[myUser,setmyUser]=useState(null);
+  console.log(myUser)
   const [user, setUser] = useState(null); // برای ذخیره اطلاعات کاربر
+  console.log(user)
   const [token, setToken] = useState(null); // برای ذخیره توکن
 
   // ثبت‌نام کاربر
@@ -56,7 +59,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, token, signup, login, logout }}>
+    <AuthContext.Provider value={{ user, token, signup, login, logout,myUser,setmyUser }}>
       {children}
     </AuthContext.Provider>
   );
