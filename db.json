@@ -1,4 +1,67 @@
 {
+
+
+  "products":[
+
+
+    {
+      "id": 1,
+      "name": {
+        "fa": "محصول فارسی",
+        "en": "Product in English"
+      },
+      "description": {
+        "fa": "توضیحات محصول فارسی",
+        "en": "Description of product in English"
+      },
+      "price": {
+        "fa": 100000,
+        "en": 25
+      },
+      "currency": {
+        "fa": "تومان",
+        "en": "USD"
+      },
+      "category": {
+        "fa": "دسته‌بندی فارسی",
+        "en": "Category in English"
+      },
+      "image": "product_image.jpg",
+      "category_id": 1
+    },
+    {
+      "id": 2,
+      "name": {
+        "fa": "محصول دیگر",
+        "en": "Another Product"
+      },
+      "description": {
+        "fa": "توضیحات محصول دیگر به فارسی",
+        "en": "Description of another product in English"
+      },
+      "price": {
+        "fa": 150000,
+        "en": 35
+      },
+      "currency": {
+        "fa": "تومان",
+        "en": "USD"
+      },
+      "category": {
+        "fa": "دسته‌بندی دیگر",
+        "en": "Another Category"
+      },
+      "image": "product_image_2.jpg",
+      "category_id": 2
+    }
+
+  ],
+
+
+
+
+
+
   "store": [
     {
       "category": "کاپشن",

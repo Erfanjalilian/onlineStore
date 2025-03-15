@@ -1,6 +1,8 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { useAuth } from "@/context/AuthContext"; // استفاده از AuthContext
 
 function Card({ title, children }) {
   return (
@@ -12,16 +14,18 @@ function Card({ title, children }) {
 }
 
 export default function UserDashboard() {
+  const { logout, setmyUser } = useAuth(); // استفاده از متد logout
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [isEditing, setIsEditing] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', password: '' });
+  const router = useRouter();
 
   useEffect(() => {
     const userId = localStorage.getItem('userId');
 
     if (!userId) {
-      window.location.href = '/login';
+      router.push('/login');
       return;
     }
 
@@ -44,7 +48,14 @@ export default function UserDashboard() {
     }
 
     fetchUserData();
-  }, []);
+  }, [router]);
+
+  const handleLogout = () => {
+    logout();  // فراخوانی متد logout برای حذف اطلاعات کاربر و توکن
+    localStorage.removeItem('userId');
+    localStorage.removeItem('role');
+    router.push('/LoginPage');  // هدایت کاربر به صفحه لاگین
+  };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -88,6 +99,7 @@ export default function UserDashboard() {
   }
 
   return (
+    <div>
     <div className="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-gray-50 min-h-screen">
       <Card title="اطلاعات حساب">
         {isEditing ? (
@@ -125,6 +137,21 @@ export default function UserDashboard() {
         <p className="text-2xl font-bold">{user.orders?.length || 0}</p>
         <button className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600">مشاهده سفارش‌ها</button>
       </Card>
+
+      {/* دکمه لاگ اوت */}
+    
+       
+      
+    </div>
+    <div className='text-center'>
+    <button
+          onClick={handleLogout}
+          className="bg-red-500 text-white rounded hover:bg-red-600 pt-3 pb-3 pl-6 pr-6"
+        >
+          خروج از حساب
+        </button>
+        <br /><br /><br />
+        </div>
     </div>
   );
 }
