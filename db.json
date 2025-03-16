@@ -1,12 +1,7 @@
 {
-
-
-  "products":[
-
-
+  "products": [
     {
-      "id": 1,
-    
+      "id": "1",
       "name": {
         "fa": "محصول فارسی",
         "en": "Product in English"
@@ -27,11 +22,11 @@
         "fa": "دسته‌بندی فارسی",
         "en": "Category in English"
       },
-      "image": "product_image.jpg",
+      "image": "https://poshakmeysammj.com/wp-content/uploads/2024/03/IMG_2024-03-05-153451.jpeg",
       "category_id": 1
     },
     {
-      "id": 2,
+      "id": "2",
       "name": {
         "fa": "محصول دیگر",
         "en": "Another Product"
@@ -52,26 +47,11 @@
         "fa": "دسته‌بندی دیگر",
         "en": "Another Category"
       },
-      "image": "product_image_2.jpg",
+      "image": "https://poshakmeysammj.com/wp-content/uploads/2024/12/photo_2024-11-14_06-54-08.jpg",
       "category_id": 2
     }
-
   ],
-
-
-
-
-
-
   "store": [
-    {
-      "category": "کاپشن",
-      "title": "kaption",
-      "Price": "101",
-      "description": "this is the great kaption",
-      "image": "https://poshakmeysammj.com/wp-content/uploads/2024/12/photo_2024-11-14_06-54-08.jpg",
-      "id": "1"
-    },
     {
       "title": "shortevarzeshi",
       "price": "123400",

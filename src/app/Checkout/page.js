@@ -11,14 +11,20 @@ const CheckoutPage = () => {
       const { cart, removeFromCart, increaseQuantity, decreaseQuantity } = useCart();
       const {myUser}=useAuth();
     
-      const totalPrice = cart.reduce((total, item) => total + item.Price * item.quantity, 0);
+      const totalPrice = cart.reduce((total, item) => total + item.price.en * item.quantity, 0);
   return (
   
     <div className="min-h-screen bg-gray-100 py-8">
         {
       myUser===null ? 
       <div>
-         <h1 className='text-3xl font-bold text-center mb-8'>To access this page, first log in to the site.</h1>
+        {
+          language==="en"?
+          <h1 className='text-3xl font-bold text-center mb-8'>To access this page, first log in to the site.</h1>:
+          <h1 className='text-3xl font-bold text-center mb-8'>برای دسترسی به این صفحه ابتدا وارد سایت شوید.</h1>
+
+
+        }
          <LoginPage />
       </div>:
       
@@ -37,8 +43,18 @@ const CheckoutPage = () => {
           <div key={item.id} className="flex items-center justify-between p-4 bg-white rounded-lg border mt-7">
             <img src={item.image} className="w-20 h-20 rounded-md" />
             <div className="flex-1 ml-4">
-              <h3 className="text-xl">{item.title}</h3>
-              <p>{item.Price} $</p>
+              {
+                language==="en" ?
+                <div>
+                    <h3 className="text-xl">{item.name.en}</h3>
+                    <p>{item.price.en} $</p>
+                </div>:
+                <div>
+                    <h3 className="text-xl">{item.name.fa}</h3>
+                    <p>{item.price.fa} تومان</p>
+                </div>
+              }
+            
               <div className="mt-9">
             <button className="px-4 py-2 bg-red-700 text-white rounded" onClick={() => decreaseQuantity(item.id)}>-</button>
             <span className="p-3">{item.quantity}</span>
