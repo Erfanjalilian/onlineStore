@@ -3,12 +3,12 @@
     {
       "id": "1",
       "name": {
-        "fa": "محصول فارسی",
-        "en": "Product in English"
+        "fa": "تی شرت",
+        "en": "T-shirt"
       },
       "description": {
-        "fa": "توضیحات محصول فارسی",
-        "en": "Description of product in English"
+        "fa": "بهترین تی شرت موجود در بازار تهران",
+        "en": "\nThe best t-shirt available in Tehran market"
       },
       "price": {
         "fa": 100000,
@@ -26,29 +26,21 @@
       "category_id": 1
     },
     {
-      "id": "2",
+      "id": "cd01",
       "name": {
-        "fa": "محصول دیگر",
-        "en": "Another Product"
-      },
-      "description": {
-        "fa": "توضیحات محصول دیگر به فارسی",
-        "en": "Description of another product in English"
+        "en": "the blues",
+        "fa": "بلوز"
       },
       "price": {
-        "fa": 150000,
-        "en": 35
+        "en": "10",
+        "fa": "700000"
       },
-      "currency": {
-        "fa": "تومان",
-        "en": "USD"
+      "description": {
+        "en": "The best men's blouse on the market",
+        "fa": "بهترین بلوز مردانه ی موجود در بازار"
       },
-      "category": {
-        "fa": "دسته‌بندی دیگر",
-        "en": "Another Category"
-      },
-      "image": "https://poshakmeysammj.com/wp-content/uploads/2024/12/photo_2024-11-14_06-54-08.jpg",
-      "category_id": 2
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9VG2JEvYPC6nvZBRuiIl53o-vElaXL6rrog&s",
+      "category": "the blues"
     }
   ],
   "store": [

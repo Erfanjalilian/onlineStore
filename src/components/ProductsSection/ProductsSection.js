@@ -3,12 +3,12 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 
 async function fetchData() {
-  const result = await fetch("http://localhost:3000/store");
+  const result = await fetch("http://localhost:3000/products");
   return await result.json();
 }
 
 async function deleteProduct(id) {
-  const response = await fetch(`http://localhost:3000/store/${id}`, {
+  const response = await fetch(`http://localhost:3000/products/${id}`, {
     method: "DELETE",
   });
   return response.ok;
@@ -68,8 +68,8 @@ export default function ProductsSection() {
           <tbody>
             {products.map((item) => (
               <tr className="border-b text-center" key={item.id}>
-                <td className="p-2">{item.title}</td>
-                <td className="p-2">{item.Price} تومان</td>
+                <td className="p-2">{item.name.fa}</td>
+                <td className="p-2">{item.price.fa} تومان</td>
                 <td className="p-2">۱۰ عدد</td>
                 <td className="p-2">
                   <Link href={`/dashbordAdmin9876/${item.id}`}>

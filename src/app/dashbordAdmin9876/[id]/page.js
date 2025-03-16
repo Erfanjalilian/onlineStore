@@ -16,7 +16,7 @@ function EditProductPage() {
 
     const fetchProduct = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/store/${id}`);
+        const response = await fetch(`http://localhost:3000/products/${id}`);
         if (!response.ok) {
           throw new Error("خطایی در دریافت داده‌ها رخ داد");
         }

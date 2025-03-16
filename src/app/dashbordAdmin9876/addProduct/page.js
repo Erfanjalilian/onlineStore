@@ -1,29 +1,43 @@
-"use client"
+"use client";
 import { useState } from "react";
 
 const AddProduct = () => {
   const [product, setProduct] = useState({
-    title: "",
-    Price: "",
-    description: "",
+    name: { en: "", fa: "" },
+    price: { en: "", fa: "" },
+    description: { en: "", fa: "" },
     image: "",
-    category: "",
+    category: {en:"" , fa:""}
   });
 
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
 
   const handleChange = (e) => {
-    setProduct({ ...product, [e.target.name]: e.target.value });
+    const { name, value, dataset } = e.target;
+    
+    if (dataset.lang) {
+      setProduct((prevProduct) => ({
+        ...prevProduct,
+        [name]: {
+          ...prevProduct[name],
+          [dataset.lang]: value,
+        },
+      }));
+    } else {
+      setProduct((prevProduct) => ({
+        ...prevProduct,
+        [name]: value,
+      }));
+    }
   };
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:3000/store", {
+      const response = await fetch("http://localhost:3000/products", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -33,7 +47,13 @@ const AddProduct = () => {
 
       if (response.ok) {
         setMessage("محصول با موفقیت اضافه شد!");
-        setProduct({ title: "", Price: "", description: "", image: "", category: "" });
+        setProduct({
+          name: { en: "", fa: "" },
+          price: { en: "", fa: "" },
+          description: { en: "", fa: "" },
+          image: "",
+          category: {en:"" , fa:""}
+        });
       } else {
         setMessage("مشکلی پیش آمده است.");
       }
@@ -45,27 +65,48 @@ const AddProduct = () => {
   };
 
   return (
-  
-    <div className="max-w-lg mx-auto bg-white shadow-lg p-6 rounded-lg mt-10">
+    <div className="text-right max-w-lg mx-auto bg-white shadow-lg p-6 rounded-lg mt-10">
       <h2 className="text-xl font-semibold mb-4">افزودن محصول جدید</h2>
       {message && <p className="mb-4 text-green-600">{message}</p>}
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
           type="text"
-          name="title"
-          value={product.title}
+          name="name"
+          data-lang="fa"
+          value={product.name.fa}
           onChange={handleChange}
-          placeholder="نام محصول"
-          className="w-full p-2 border rounded-lg"
+          placeholder="نام محصول (فارسی)"
+          className="w-full p-2 border rounded-lg text-right"
+          required
+        />
+        <input
+          type="text"
+          name="name"
+          data-lang="en"
+          value={product.name.en}
+          onChange={handleChange}
+          placeholder="نام محصول (انگلیسی)"
+          className="w-full p-2 border rounded-lg text-right"
           required
         />
         <input
           type="number"
-          name="Price"
-          value={product.Price}
+          name="price"
+          data-lang="fa"
+          value={product.price.fa}
           onChange={handleChange}
-          placeholder="قیمت محصول"
-          className="w-full p-2 border rounded-lg"
+          placeholder="قیمت محصول (تومان)"
+          className="w-full p-2 border rounded-lg text-right"
+          required
+        />
+        <input
+          type="number"
+          name="price"
+          data-lang="en"
+          value={product.price.en}
+          onChange={handleChange}
+          placeholder="قیمت محصول (دلار)"
+          className="w-full p-2 border rounded-lg text-right"
           required
         />
         <input
@@ -74,22 +115,41 @@ const AddProduct = () => {
           value={product.image}
           onChange={handleChange}
           placeholder="لینک تصویر محصول"
-          className="w-full p-2 border rounded-lg"
+          className="w-full p-2 border rounded-lg text-right"
         />
         <input
           type="text"
           name="category"
-          value={product.category}
+          value={product.category.fa}
           onChange={handleChange}
           placeholder="دسته‌بندی"
-          className="w-full p-2 border rounded-lg"
+          className="w-full p-2 border rounded-lg text-right"
+        />
+        <br />
+            <input
+          type="text"
+          name="category"
+          value={product.category.en}
+          onChange={handleChange}
+          placeholder="دسنه بندی به اینگلیسی"
+          className="w-full p-2 border rounded-lg text-right"
         />
         <textarea
           name="description"
-          value={product.description}
+          data-lang="fa"
+          value={product.description.fa}
           onChange={handleChange}
-          placeholder="توضیحات محصول"
-          className="w-full p-2 border rounded-lg"
+          placeholder="توضیحات محصول (فارسی)"
+          className="w-full p-2 border rounded-lg text-right"
+          rows="4"
+        ></textarea>
+        <textarea
+          name="description"
+          data-lang="en"
+          value={product.description.en}
+          onChange={handleChange}
+          placeholder="توضیحات محصول (انگلیسی)"
+          className="w-full p-2 border rounded-lg text-right"
           rows="4"
         ></textarea>
         <button
