@@ -38,7 +38,7 @@ function Navbar() {
     return (
         <>
             {/* هدر ثابت و راست‌چین در حالت فارسی */}
-            <div className={`shadow-md bg-white/80 backdrop-blur-lg w-full z-50 h-20 flex items-center transition-all duration-300 ${direction === "rtl" ? "rtl flex-row-reverse text-right" : "ltr"}`}>
+            <div className={`shadow-md bg-white/80 backdrop-blur-lg w-full m-auto z-50 h-20 flex items-center transition-all duration-300 ${direction === "rtl" ? "rtl flex-row-reverse text-right" : "ltr"}`}>
                 <div className="flex items-center justify-between w-11/12 mx-auto">
                     {/* لوگو */}
                     <img className="w-36 h-36" src="logo.png" alt="Logo" />

@@ -7,7 +7,8 @@ const AddProduct = () => {
     price: { en: "", fa: "" },
     description: { en: "", fa: "" },
     image: "",
-    category: {en:"" , fa:""}
+    category: { en: "", fa: "" },
+    discountPercentage: "",
   });
 
   const [loading, setLoading] = useState(false);
@@ -15,7 +16,8 @@ const AddProduct = () => {
 
   const handleChange = (e) => {
     const { name, value, dataset } = e.target;
-    
+
+    // اگر فیلد زبان داشته باشد
     if (dataset.lang) {
       setProduct((prevProduct) => ({
         ...prevProduct,
@@ -25,9 +27,10 @@ const AddProduct = () => {
         },
       }));
     } else {
+      // اگر فیلد discountPercentage باشد، آن را به عدد تبدیل می‌کنیم
       setProduct((prevProduct) => ({
         ...prevProduct,
-        [name]: value,
+        [name]: name === "discountPercentage" ? Number(value) : value, // 👈 تبدیل مقدار به عدد برای discountPercentage
       }));
     }
   };
@@ -52,7 +55,8 @@ const AddProduct = () => {
           price: { en: "", fa: "" },
           description: { en: "", fa: "" },
           image: "",
-          category: {en:"" , fa:""}
+          category: { en: "", fa: "" },
+          discountPercentage: "", // بازنشانی مقدار تخفیف به حالت اولیه
         });
       } else {
         setMessage("مشکلی پیش آمده است.");
@@ -110,6 +114,14 @@ const AddProduct = () => {
           required
         />
         <input
+          type="number"
+          name="discountPercentage"
+          value={product.discountPercentage}
+          onChange={handleChange}
+          placeholder="میزان تخفیف (به درصد)"
+          className="w-full p-2 border rounded-lg text-right"
+        />
+        <input
           type="text"
           name="image"
           value={product.image}
@@ -126,12 +138,12 @@ const AddProduct = () => {
           className="w-full p-2 border rounded-lg text-right"
         />
         <br />
-            <input
+        <input
           type="text"
           name="category"
           value={product.category.en}
           onChange={handleChange}
-          placeholder="دسنه بندی به اینگلیسی"
+          placeholder="دسته‌بندی (انگلیسی)"
           className="w-full p-2 border rounded-lg text-right"
         />
         <textarea

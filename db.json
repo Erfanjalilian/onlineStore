@@ -8,7 +8,7 @@
       },
       "description": {
         "fa": "بهترین تی شرت موجود در بازار تهران",
-        "en": "\nThe best t-shirt available in Tehran market"
+        "en": "The best t-shirt available in Tehran market"
       },
       "price": {
         "fa": 100000,
@@ -23,7 +23,9 @@
         "en": "Category in English"
       },
       "image": "https://poshakmeysammj.com/wp-content/uploads/2024/03/IMG_2024-03-05-153451.jpeg",
-      "category_id": 1
+      "category_id": 1,
+      "discountPercentage": 10,
+      "salesCount": 150
     },
     {
       "id": "cd01",
@@ -40,130 +42,27 @@
         "fa": "بهترین بلوز مردانه ی موجود در بازار"
       },
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9VG2JEvYPC6nvZBRuiIl53o-vElaXL6rrog&s",
-      "category": "the blues"
-    }
-  ],
-  "store": [
-    {
-      "title": "shortevarzeshi",
-      "price": "123400",
-      "description": "this is the shortevarzeshi",
-      "image": "https://poshakmeysammj.com/wp-content/uploads/2024/12/photo_2024-11-14_06-54-08.jpg",
-      "Price": "222",
-      "id": "2"
+      "category": "the blues",
+      "discountPercentage": 0,
+      "salesCount": 50
     },
     {
-      "category": "دورس",
-      "title": "joorabe mardane",
-      "Price": "400",
-      "image": "https://www.sarabara.com/wp-content/uploads/2025/01/socks-vk599-bk02-1.jpg",
-      "description": "this is joorabe mardane",
-      "id": "4"
-    },
-    {
-      "id": "2efb",
-      "title": "پیراهن جین",
-      "Price": "350",
-      "description": "یک پیراهن جین بسیار با کیفیت و عالی ",
-      "image": "https://poshakmeysammj.com/wp-content/uploads/2024/04/IMG_2024-04-21-180519.jpeg",
-      "category": "تی شرت"
-    },
-    {
-      "id": "ff4d",
-      "title": "تیشرت لش",
-      "Price": "289",
-      "description": "بهترین تی شرت لش بازار",
-      "image": "https://poshakmeysammj.com/wp-content/uploads/2024/03/IMG_2024-03-05-153451.jpeg",
-      "category": "تی شرت",
-      "": "g"
-    }
-  ],
-  "storpe": [
-    {
-      "id": "1",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
-      "title": "عنوان محصول 1",
-      "description": "این یک توضیح کوتاه در مورد محصول است. برای ارائه یک نمای کلی طراحی شده است.",
-      "Price": 1200000
-    },
-    {
-      "id": "2",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
-      "title": "عنوان محصول 2",
-      "description": "این یک توضیح کوتاه در مورد محصول است. برای ارائه یک نمای کلی طراحی شده است.",
-      "Price": 1200000
-    },
-    {
-      "title": "عرفان",
-      "price": "7",
-      "description": "سلام من عرفان جلیلیان هستم",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
-      "id": "3"
-    },
-    {
-      "id": "4",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
-      "title": "عنوان محصول 4",
-      "description": "این یک توضیح کوتاه در مورد محصول است. برای ارائه یک نمای کلی طراحی شده است.",
-      "Price": 1200000
-    },
-    {
-      "id": "5",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
-      "title": "عنوان محصول 5",
-      "description": "این یک توضیح کوتاه در مورد محصول است. برای ارائه یک نمای کلی طراحی شده است.",
-      "Price": 1200000
-    },
-    {
-      "id": "6",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
-      "title": "عنوان محصول 6",
-      "description": "این یک توضیح کوتاه در مورد محصول است. برای ارائه یک نمای کلی طراحی شده است.",
-      "Price": 1200000
-    },
-    {
-      "id": "7",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
-      "title": "عنوان محصول 7",
-      "description": "این یک توضیح کوتاه در مورد محصول است. برای ارائه یک نمای کلی طراحی شده است.",
-      "Price": 1200000
-    },
-    {
-      "id": "8",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP3k7gsqNtMuMSCPdJ-QZOhir1EhVZn6Ni5g&s",
-      "title": "عنوان محصول 8",
-      "description": "این یک توضیح کوتاه در مورد محصول است. برای ارائه یک نمای کلی طراحی شده است.",
-      "Price": 1200000
-    }
-  ],
-  "takhfif": [
-    {
-      "id": "1",
-      "image": "https://poshakmeysammj.com/wp-content/uploads/2025/01/IMG_2025-01-19-144518.jpeg",
-      "title": "کت جین داخل خز1104",
-      "redprice": 1500000,
-      "greenprice": 1200000
-    },
-    {
-      "id": "2",
-      "image": "https://poshakmeysammj.com/wp-content/uploads/2025/01/photo_2025-01-11_13-32-20.jpg",
-      "title": "پیراهن کنفی ۱۰۵۷",
-      "redprice": 1200000,
-      "greenprice": 950000
-    },
-    {
-      "id": "3",
-      "title": "پیراهن آستین کوتاه1150",
-      "image": "https://poshakmeysammj.com/wp-content/uploads/2024/12/photo_2024-11-14_06-54-08.jpg",
-      "redprice": 2000000,
-      "greenprice": 1500000
-    },
-    {
-      "id": "4",
-      "title": "تیبشرت افکت دار B",
-      "image": "https://poshakmeysammj.com/wp-content/uploads/2025/01/IMG_2025-01-19-145235.jpeg",
-      "redprice": 500000,
-      "greenprice": 350000
+      "id": "2e09",
+      "name": {
+        "en": "pants",
+        "fa": "شلوار"
+      },
+      "price": {
+        "en": "29",
+        "fa": "1200000"
+      },
+      "description": {
+        "en": "The best pants available in Iran",
+        "fa": "بهترین شلوار موجود در کشور ایران"
+      },
+      "image": "https://jeaniranshop.com/wp-content/uploads/2020/08/cotton-pants.jpg",
+      "category": "pants",
+      "discountPercentage": 10
     }
   ],
   "user": [
@@ -368,6 +267,14 @@
       "phone": "09213570388",
       "role": "user",
       "password": "123456789"
+    },
+    {
+      "id": "5950",
+      "name": "Erfan jaliliyan",
+      "email": "www.erfan83@gmail.com",
+      "phone": "901234567",
+      "password": "erfanabcd12345",
+      "role": "user"
     }
   ]
 }
