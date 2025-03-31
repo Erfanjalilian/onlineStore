@@ -132,19 +132,23 @@ const AddProduct = () => {
         <input
           type="text"
           name="category"
+          data-lang="fa"
           value={product.category.fa}
           onChange={handleChange}
           placeholder="دسته‌بندی"
           className="w-full p-2 border rounded-lg text-right"
+          required
         />
         <br />
         <input
           type="text"
           name="category"
+          data-lang="en"
           value={product.category.en}
           onChange={handleChange}
           placeholder="دسته‌بندی (انگلیسی)"
           className="w-full p-2 border rounded-lg text-right"
+          required
         />
         <textarea
           name="description"

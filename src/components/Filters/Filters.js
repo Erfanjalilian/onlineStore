@@ -1,79 +1,48 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { MyLanguage } from "../../context/myLanguage";
 
 const Filters = ({ onFilterChange }) => {
+  const { language } = useContext(MyLanguage);
   const [selectedCategory, setSelectedCategory] = useState("");
-  const [Price, setPrice] = useState([0, 1000]);
 
-  const handleCategoryChange = (category) => {
-    console.log(category)
-    setSelectedCategory(category);
-    onFilterChange({ category, Price });
-  };
+  const categories = [
+    { en: "pants", fa: "شلوار" },
+    { en: "T-shirt", fa: "تی شرت" },
+    { en: "Jacket", fa: "ژاکت" },
+    { en: "Sweatshirt", fa: "دورس" },
+  ];
 
-  const handlePriceChange = (event) => {
-    
-    const value = event.target.value;
-    setPrice([0, value]);
-   
-    
-    onFilterChange({ category: selectedCategory, Price: [0, value] });
+  const handleCategoryChange = (categoryEn) => {
+    setSelectedCategory(categoryEn);
+    onFilterChange({ category: categoryEn }); // ارسال مقدار انگلیسی به فیلتر
   };
 
   return (
     <div className="bg-gray-100 p-4 rounded-lg w-full md:w-full">
-      <h2 className="text-lg font-semibold mb-4">فیلترها</h2>
-      
-      {/* دسته‌بندی‌ها */}
-      <div className="mb-4">
-        <h3 className="text-md font-medium mb-2">دسته‌بندی‌ها</h3>
-        <ul className="space-y-2">
-          <li>
-            <button
-              onClick={() => handleCategoryChange("شلوار")}
-              className={`block w-full text-left px-3 py-2 rounded-md text-sm transition-colors ${selectedCategory === "شلوار" ? "bg-blue-500 text-white" : "bg-white text-gray-700 hover:bg-gray-200"}`}
-            >
-              شلوار
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={() => handleCategoryChange("تی شرت")}
-              className={`block w-full text-left px-3 py-2 rounded-md text-sm transition-colors ${selectedCategory === "تی شرت" ? "bg-blue-500 text-white" : "bg-white text-gray-700 hover:bg-gray-200"}`}
-            >
-              تی شرت
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={() => handleCategoryChange("کاپشن")}
-              className={`block w-full text-left px-3 py-2 rounded-md text-sm transition-colors ${selectedCategory === "کاپشن" ? "bg-blue-500 text-white" : "bg-white text-gray-700 hover:bg-gray-200"}`}
-            >
-               کاپشن
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={() => handleCategoryChange("دورس")}
-              className={`block w-full text-left px-3 py-2 rounded-md text-sm transition-colors ${selectedCategory === "دورس" ? "bg-blue-500 text-white" : "bg-white text-gray-700 hover:bg-gray-200"}`}
-            >
-              دورس
-            </button>
-          </li>
-        </ul>
-      </div>
+      <h2 className="text-lg font-semibold mb-4">
+        {language === "en" ? "Filters" : "فیلترها"}
+      </h2>
 
-      {/* فیلتر قیمت */}
-      <div>
-        <h3 className="text-md font-medium mb-2">محدوده قیمت</h3>
-        <input
-          type="range"
-          min="0"
-          max="1000"
-          value={Price[1]}
-          onChange={handlePriceChange}
-          className="w-full"
-        />
-        <p className="text-sm text-gray-700 mt-2">تا {Price[1]} تومان</p>
+      <div className="mb-4">
+        <h3 className="text-md font-medium mb-2">
+          {language === "en" ? "Categories" : "دسته‌بندی‌ها"}
+        </h3>
+        <ul className="space-y-2">
+          {categories.map((category) => (
+            <li key={category.en}>
+              <button
+                onClick={() => handleCategoryChange(category.en)}
+                className={`block w-full text-left px-3 py-2 rounded-md text-sm transition-colors ${
+                  selectedCategory === category.en
+                    ? "bg-blue-500 text-white"
+                    : "bg-white text-gray-700 hover:bg-gray-200"
+                }`}
+              >
+                {language === "en" ? category.en : category.fa}
+              </button>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ function LanguageSwitcher(){
   const toggleLanguage = () => {
     setIsEnglish(!isEnglish);
     if(check%2==1){
-      setLanguage("pe")
+      setLanguage("fa")
       setcheck(2)
     }
     if(check%2==0){

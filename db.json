@@ -19,8 +19,8 @@
         "en": "USD"
       },
       "category": {
-        "fa": "دسته‌بندی فارسی",
-        "en": "Category in English"
+        "en": "Jacket",
+        "fa": "ژاکت"
       },
       "image": "https://poshakmeysammj.com/wp-content/uploads/2024/03/IMG_2024-03-05-153451.jpeg",
       "category_id": 1,
@@ -42,7 +42,10 @@
         "fa": "بهترین بلوز مردانه ی موجود در بازار"
       },
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9VG2JEvYPC6nvZBRuiIl53o-vElaXL6rrog&s",
-      "category": "the blues",
+      "category": {
+        "en": "T-shirt",
+        "fa": "تی شرت"
+      },
       "discountPercentage": 0,
       "salesCount": 50
     },
@@ -61,8 +64,95 @@
         "fa": "بهترین شلوار موجود در کشور ایران"
       },
       "image": "https://jeaniranshop.com/wp-content/uploads/2020/08/cotton-pants.jpg",
-      "category": "pants",
+      "category": {
+        "en": "pants",
+        "fa": "شلوار"
+      },
       "discountPercentage": 10
+    },
+    {
+      "id": "6a1b",
+      "name": {
+        "en": "Male course",
+        "fa": "دورس مردانه"
+      },
+      "price": {
+        "en": "42",
+        "fa": "500000"
+      },
+      "description": {
+        "en": "The best course available in the entire Iranian market",
+        "fa": "بهترین دورس موجود در بازار کل ایران"
+      },
+      "image": "https://takavarco.com/wp-content/uploads/2023/12/%D8%AF%D9%88%D8%B1%D8%B3-%D9%85%D8%B1%D8%AF%D8%A7%D9%86%D9%87-GEORGE.webp",
+      "category": {
+        "en": "Sweatshirt",
+        "fa": "دورس"
+      },
+      "discountPercentage": 0
+    },
+    {
+      "id": "91ae",
+      "name": {
+        "en": "jeans",
+        "fa": "شلوار جین"
+      },
+      "price": {
+        "en": "30",
+        "fa": "2000000"
+      },
+      "description": {
+        "en": "The best jeans available in the Iranian market",
+        "fa": "بهترین شلوار جین موجود در بازار ایران"
+      },
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaTO5EhH5152bls9vQyXsdhCCDWuRl1r9cVChRKb8bREYOjJqlBorufG2WLiurNnA5K5c&usqp=CAU",
+      "category": {
+        "en": "pants",
+        "fa": "شلوار"
+      },
+      "discountPercentage": 39
+    },
+    {
+      "id": "28d5",
+      "name": {
+        "en": "Linen pants",
+        "fa": "شلوار کتان"
+      },
+      "price": {
+        "en": "33",
+        "fa": "4000000"
+      },
+      "description": {
+        "en": "The best pants available in the Iranian market",
+        "fa": "بهترین شلوار موجود در بازار ایران"
+      },
+      "image": "https://www.iranpooshak.com/wp-content/uploads/2024/06/pant-green2.jpg",
+      "category": {
+        "en": "pants",
+        "fa": "شلوار"
+      },
+      "discountPercentage": 0
+    },
+    {
+      "id": "d3b7",
+      "name": {
+        "en": "Men's T-shirt",
+        "fa": "تی شرت مردانه"
+      },
+      "price": {
+        "en": "11",
+        "fa": "3000000"
+      },
+      "description": {
+        "en": "The best t-shirt on the market",
+        "fa": "بهترین تی شرت موجود در بازار"
+      },
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSghq52D1GjpHWtFYzpKT9udp5oYHIMQNgmLw&s",
+      "category": {
+        "en": "T-shirt",
+        "fa": "تی شرت"
+      },
+      "discountPercentage": 0
     }
   ],
   "user": [
@@ -276,5 +366,87 @@
       "password": "erfanabcd12345",
       "role": "user"
     }
+  ],
+  "order":[
+   
+  
+      {
+        "id": 1,
+        "order_code": "ORD12345",
+        "customer_name": "علی احمدی",
+        "status": "در حال پردازش",
+        "date": "2025/03/19",
+        "total_price":30000,
+        "order_items":[
+          {
+            "product_id": 1,
+            "name": "تی‌شرت مشکی",
+            "size": "L",
+            "price": 250000,
+            "quantity": 2
+          },
+          {
+            "product_id": 2,
+            "name": "شلوار جین آبی",
+            "size": "32",
+            "price": 350000,
+            "quantity": 1
+          }
+        ]
+        
+      },
+      {
+        "id": 2,
+        "order_code": "ORD12346",
+        "customer_name": "محمد رضا",
+        "status": "ارسال شده",
+        "date": "2025/03/18",
+        "total_price":30500,
+        "order_items":[
+          {
+            "product_id": 1,
+            "name": "تی‌شرت مشکی",
+            "size": "L",
+            "price": 250000,
+            "quantity": 2
+          },
+          {
+            "product_id": 2,
+            "name": "شلوار جین آبی",
+            "size": "32",
+            "price": 350000,
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "order_code": "ORD12347",
+        "customer_name": "صدرا اکبری",
+        "status": "لغو شده",
+        "date": "2025/03/17",
+        "total_price":5000,
+        "order_items":[
+          {
+            "product_id": 1,
+            "name": "تی‌شرت مشکی",
+            "size": "L",
+            "price": 250000,
+            "quantity": 2
+          },
+          {
+            "product_id": 2,
+            "name": "شلوار جین آبی",
+            "size": "32",
+            "price": 350000,
+            "quantity": 1
+          }
+        ]
+        
+      }
+
+    
   ]
+
+  
 }

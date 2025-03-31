@@ -12,7 +12,7 @@ export default function Sidebar() {
             </Link>
           </li>
           <li className="mb-3">
-            <Link href="#orders" className="block py-2 px-4 hover:bg-blue-700 rounded">
+            <Link href="dashbordAdmin9876/order" className="block py-2 px-4 hover:bg-blue-700 rounded">
               مدیریت سفارشات
             </Link>
           </li>
