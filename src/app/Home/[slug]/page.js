@@ -22,7 +22,7 @@ function Dstore() {
 
     async function fetchProduct() {
       try {
-        const result = await fetch(`http://localhost:3000/products/${slug}`);
+        const result = await fetch(`https://6810ff2827f2fdac24139dec.mockapi.io/products/${slug}`);
 
         // بررسی اینکه پاسخ HTTP موفقیت‌آمیز بوده
         if (!result.ok) {

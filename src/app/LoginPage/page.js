@@ -26,7 +26,7 @@ export default function LoginPage() {
       const isEmail = identifier.includes('@'); // اگر شامل @ باشد، یعنی ایمیل است
       const queryParam = isEmail ? `email=${identifier}` : `phone=${identifier}`;
 
-      const response = await fetch(`http://localhost:3000/user?${queryParam}&password=${password}`);
+      const response = await fetch(`https://6810ff2827f2fdac24139dec.mockapi.io/user?${queryParam}&password=${password}`);
       const users = await response.json();
 
       if (users.length > 0) {

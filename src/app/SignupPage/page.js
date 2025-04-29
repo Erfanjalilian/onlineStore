@@ -27,7 +27,7 @@ export default function SignupPage() {
     setError(null);
 
     try {
-      const response = await fetch('http://localhost:3000/user', {
+      const response = await fetch('https://6810ff2827f2fdac24139dec.mockapi.io/user', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

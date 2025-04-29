@@ -25,7 +25,8 @@
       "image": "https://poshakmeysammj.com/wp-content/uploads/2024/03/IMG_2024-03-05-153451.jpeg",
       "category_id": 1,
       "discountPercentage": 10,
-      "salesCount": 150
+      "salesCount": 150,
+      "sizes": ["S", "M", "L", "XL"] 
     },
     {
       "id": "cd01",
@@ -47,7 +48,8 @@
         "fa": "تی شرت"
       },
       "discountPercentage": 0,
-      "salesCount": 50
+      "salesCount": 50,
+      "sizes": ["S", "M", "L", "XL"] 
     },
     {
       "id": "2e09",
@@ -68,7 +70,8 @@
         "en": "pants",
         "fa": "شلوار"
       },
-      "discountPercentage": 10
+      "discountPercentage": 10,
+      "sizes": ["S", "M", "L", "XL"] 
     },
     {
       "id": "6a1b",
@@ -89,7 +92,8 @@
         "en": "Sweatshirt",
         "fa": "دورس"
       },
-      "discountPercentage": 0
+      "discountPercentage": 0,
+      "sizes": ["S", "M", "L", "XL"] 
     },
     {
       "id": "91ae",
@@ -110,7 +114,8 @@
         "en": "pants",
         "fa": "شلوار"
       },
-      "discountPercentage": 39
+      "discountPercentage": 39,
+      "sizes": ["S", "M", "L", "XL"] 
     },
     {
       "id": "28d5",
@@ -131,7 +136,8 @@
         "en": "pants",
         "fa": "شلوار"
       },
-      "discountPercentage": 0
+      "discountPercentage": 0,
+      "sizes": ["S", "M", "L", "XL"] 
     },
     {
       "id": "d3b7",
@@ -152,7 +158,8 @@
         "en": "T-shirt",
         "fa": "تی شرت"
       },
-      "discountPercentage": 0
+      "discountPercentage": 0,
+      "sizes": ["S", "M", "L", "XL"] 
     }
   ],
   "user": [

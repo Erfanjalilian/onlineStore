@@ -11,7 +11,7 @@ function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const result = await fetch("http://localhost:3000/products");
+        const result = await fetch("https://6810ff2827f2fdac24139dec.mockapi.io/products");
         const products = await result.json();
         setData(products);
       } catch (error) {

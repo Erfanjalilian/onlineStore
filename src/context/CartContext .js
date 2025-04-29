@@ -22,10 +22,10 @@ export const CartProvider = ({ children }) => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
-  // افزودن محصول به سبد خرید (با مقدار `quantity` صحیح)
+  // افزودن محصول به سبد خرید (با مقدار `quantity` و `size` صحیح)
   const addToCart = (product) => {
     console.log("🛍 Adding product:", product); // بررسی مقدار محصول قبل از افزودن
-    
+
     const discountedPriceEn = product.price?.en
       ? product.price.en - (product.price.en * (product.discountPercentage || 0)) / 100
       : 0;
@@ -35,17 +35,17 @@ export const CartProvider = ({ children }) => {
       : 0;
   
     setCart((prevCart) => {
-      const existingProduct = prevCart.find((item) => item.id === product.id);
+      const existingProduct = prevCart.find((item) => item.id === product.id && item.size === product.size);
       
       if (existingProduct) {
-        // ✅ اگر محصول قبلاً در سبد خرید بوده، مقدار `quantity` را افزایش بده
+        // اگر محصول قبلاً در سبد خرید بوده، مقدار `quantity` را افزایش بده
         return prevCart.map((item) =>
-          item.id === product.id
+          item.id === product.id && item.size === product.size
             ? { ...item, quantity: item.quantity + product.quantity } // ⬅ اینجا مقدار جدید رو اضافه کردیم
             : item
         );
       } else {
-        // ✅ اگر محصول جدید هست، مقدار `quantity` را از پارامتر بگیر
+        // اگر محصول جدید هست، مقدار `quantity` را از پارامتر بگیر
         return [
           ...prevCart,
           {
@@ -57,30 +57,28 @@ export const CartProvider = ({ children }) => {
       }
     });
   };
-  
-
-  
-  
 
   // حذف محصول از سبد خرید
-  const removeFromCart = (productId) => {
-    setCart((prevCart) => prevCart.filter((item) => item.id !== productId));
+  const removeFromCart = (productId, size) => {
+    setCart((prevCart) => prevCart.filter((item) => item.id !== productId || item.size !== size));
   };
 
   // افزایش تعداد محصول
-  const increaseQuantity = (productId) => {
+  const increaseQuantity = (productId, size) => {
     setCart((prevCart) =>
       prevCart.map((item) =>
-        item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
+        item.id === productId && item.size === size
+          ? { ...item, quantity: item.quantity + 1 }
+          : item
       )
     );
   };
 
   // کاهش تعداد محصول
-  const decreaseQuantity = (productId) => {
+  const decreaseQuantity = (productId, size) => {
     setCart((prevCart) =>
       prevCart.map((item) =>
-        item.id === productId && item.quantity > 1
+        item.id === productId && item.size === size && item.quantity > 1
           ? { ...item, quantity: item.quantity - 1 }
           : item
       )

@@ -31,7 +31,7 @@ export default function UserDashboard() {
 
     async function fetchUserData() {
       try {
-        const response = await fetch(`http://localhost:3000/user/${userId}`);
+        const response = await fetch(`https://6810ff2827f2fdac24139dec.mockapi.io/user/${userId}`);
         const userData = await response.json();
         setUser(userData);
         setFormData({
@@ -72,7 +72,7 @@ export default function UserDashboard() {
         delete updatedData.password;
       }
 
-      const response = await fetch(`http://localhost:3000/user/${user.id}`, {
+      const response = await fetch(`https://6810ff2827f2fdac24139dec.mockapi.io/user/${user.id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updatedData),
