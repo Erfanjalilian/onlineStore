@@ -85,10 +85,10 @@ const Footer = () => {
       {
         language==="en" ?
         <div className="text-center text-gray-500 text-sm mt-8 border-t border-gray-700 pt-4 text-center">
-        © {new Date().getFullYear()} All rights reserved
+        © {new Date().getFullYear()} This site was developed by Erfan Jalilian.
       </div>:
        <div className="text-center text-gray-500 text-sm mt-8 border-t border-gray-700 pt-4 text-center">
-       © {new Date().getFullYear()} تمامی حقوق محفوظ است.
+       © {new Date().getFullYear()} این سایت توسط عرفان جلیلیان توسعه داده شده
      </div>
       }
      
