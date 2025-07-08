@@ -5,6 +5,7 @@ import Productitem from "../../components/productitem/productitem";
 import Filters from "../../components/Filters/Filters";
 import EndTheSection from "@/components/endTheSection/endTheSection";
 import Link from "next/link";
+import { SparklesIcon, ShoppingBagIcon } from "@heroicons/react/24/solid";
 
 function Store() {
   const { language } = useContext(MyLanguage);
@@ -19,7 +20,7 @@ function Store() {
         const data = await result.json();
         setProducts(data);
       } catch (error) {
-       
+        
       } finally {
         setLoading(false);
       }
@@ -35,53 +36,75 @@ function Store() {
 
   // فیلتر محصولات
   const filteredProducts = products.filter((product) => {
-    if (!filters.category) return true; // اگر فیلتر انتخاب نشده، همه محصولات نمایش داده شوند
-    return product.category.en === filters.category; // مقایسه مقدار `en`
+    if (!filters.category) return true;
+    return product.category.en === filters.category;
   });
 
-  if (loading) {
-    return <p className="text-center text-lg font-semibold">
-      {language === "en" ? "Loading..." : "در حال بارگذاری..."}
-    </p>;
-  }
-
   return (
-    <div className="w-11/12 mx-auto">
-      {/* عنوان بر اساس زبان */}
-      <div className="bg-purple-500 text-white text-center h-80 pt-32 text-4xl md:text-7xl">
-        {language === "en" ? "Store" : "فروشگاه"}
+    <div className="w-full min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 pb-10">
+      {/* هدر جذاب */}
+      <div className="relative flex flex-col items-center justify-center h-64 md:h-80 bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-500 rounded-b-3xl shadow-lg mb-10 overflow-hidden">
+        <ShoppingBagIcon className="w-16 h-16 text-white mb-4 animate-bounce" />
+        <h1 className="text-4xl md:text-6xl font-extrabold text-white drop-shadow-lg tracking-tight">
+          {language === "en" ? "Store" : "فروشگاه"}
+        </h1>
+        <p className="mt-2 text-white/80 text-lg md:text-2xl font-medium">
+          {language === "en" ? "Discover the best products!" : "بهترین محصولات را کشف کنید!"}
+        </p>
+        <SparklesIcon className="absolute right-8 top-8 w-10 h-10 text-yellow-300 opacity-70 animate-pulse" />
+        <SparklesIcon className="absolute left-8 bottom-8 w-8 h-8 text-pink-300 opacity-60 animate-pulse" />
       </div>
 
-      <br /><br />
-      <div className="flex flex-col md:flex-row">
-        {/* فیلتر در موبایل بالا قرار می‌گیرد */}
-        <div className="w-full md:w-3/12 md:mr-5 mb-4 md:mb-0">
-          <Filters onFilterChange={handleFilterChange} />
-        </div>
+      <div className="w-11/12 mx-auto flex flex-col md:flex-row gap-8">
+        {/* فیلترها */}
+        <aside className="w-full md:w-1/4 mb-6 md:mb-0">
+          <div className="bg-white rounded-2xl shadow-xl p-6 sticky top-8">
+            <h2 className="text-xl font-bold text-purple-700 mb-4 flex items-center gap-2">
+              <SparklesIcon className="w-6 h-6 text-yellow-400" />
+              {language === "en" ? "Filters" : "فیلترها"}
+            </h2>
+            <Filters onFilterChange={handleFilterChange} />
+          </div>
+        </aside>
 
         {/* لیست محصولات */}
-        <div className="w-full md:w-9/12">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {filteredProducts.length > 0 ? (
-              filteredProducts.map((item) => (
-                <div key={item.id}>
-                  <Link href={`/store/${item.id}`}>
-                    <Productitem {...item} />
-                  </Link>
-                </div>
-              ))
-            ) : (
-              <p className="text-center text-lg font-semibold">
-                {language === "en" ? "No products found." : "محصولی یافت نشد."}
-              </p>
+        <main className="w-full md:w-3/4">
+          <div className="flex items-center justify-between mb-6">
+            <span className="text-gray-700 text-lg font-semibold">
+              {language === "en"
+                ? `${filteredProducts.length} products found`
+                : `${filteredProducts.length} محصول یافت شد`}
+            </span>
+            {loading && (
+              <span className="text-blue-500 animate-pulse font-bold">
+                {language === "en" ? "Loading..." : "در حال بارگذاری..."}
+              </span>
             )}
           </div>
-        </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredProducts.length > 0 ? (
+              filteredProducts.map((item) => (
+                <Link key={item.id} href={`/store/${item.id}`} className="group">
+                  <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-4 flex flex-col h-full border border-transparent group-hover:border-blue-400">
+                    <Productitem {...item} />
+                  </div>
+                </Link>
+              ))
+            ) : (
+              <div className="col-span-full flex flex-col items-center justify-center py-16">
+                <span className="text-4xl text-gray-400 mb-4">😕</span>
+                <p className="text-center text-lg font-semibold text-gray-500">
+                  {language === "en" ? "No products found." : "محصولی یافت نشد."}
+                </p>
+              </div>
+            )}
+          </div>
+        </main>
       </div>
 
-      <br /><br /><br /><br />
-      <EndTheSection />
-      <br /><br />
+      <div className="w-11/12 mx-auto mt-16">
+        <EndTheSection />
+      </div>
     </div>
   );
 }
