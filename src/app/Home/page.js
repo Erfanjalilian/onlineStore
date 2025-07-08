@@ -2,6 +2,7 @@
 import { useContext, useState, useEffect } from "react";
 import { MyLanguage } from "@/context/myLanguage";
 import EndTheSection from "@/components/endTheSection/endTheSection";
+import Link from "next/link";
 
 function Home() {
   const { language } = useContext(MyLanguage);
@@ -80,8 +81,10 @@ function Home() {
       {loading ? (
         <p className="text-center">در حال بارگذاری...</p>
       ) : (
+        ///////////////////////////
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {discountedProducts.map((item) => (
+           
             <div key={item.id} className="border p-4 rounded-lg shadow-md bg-white">
               <img src={item.image} alt={item.name.fa} className="w-full h-40 object-cover rounded-md" />
           {
@@ -118,12 +121,16 @@ function Home() {
           {
             
             language==="en" ? 
+            <Link href={`/store/${item.id}`}>
             <button className="mt-2 w-full bg-blue-500 text-white py-1 rounded-md hover:bg-blue-600">
             Buy
-          </button>:
+          </button>
+          </Link>:
+          <Link href={`/store/${item.id}`}>
            <button className="mt-2 w-full bg-blue-500 text-white py-1 rounded-md hover:bg-blue-600">
            خرید
          </button>
+         </Link>
           }
          
              
@@ -154,20 +161,23 @@ function Home() {
                    <h3 className="mt-2 text-lg font-semibold text-left">{product.name.en}</h3>
                    <p className="text-red-700 font-bold text-left">{product.price.en} $</p>
                    <p className="mt-2 text-lg font-semibold text-left text-green-700">{product.description.en}</p>
+                   <Link href={`/store/${product.id}`}>
                   
                     <button className="mt-2 w-full bg-blue-500 text-white py-1 rounded-md hover:bg-blue-600">
                      buy
                     </button>
+                    </Link>
                 </div>:
                 <div>
                    <h3 className="mt-2 text-lg font-semibold text-right">{product.name.fa}</h3>
                    <p className="text-red-700 font-bold text-right">{product.price.fa} تومان</p>
                    <p className="mt-2 text-lg font-semibold text-right text-green-700">{product.description.fa}</p>
 
-             
+             <Link href={`/store/${product.id}`}>
               <button className="mt-2 w-full bg-blue-500 text-white py-1 rounded-md hover:bg-blue-600">
                 خرید
               </button>
+              </Link>
                 </div>
               }
              

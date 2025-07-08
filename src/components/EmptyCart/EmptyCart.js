@@ -2,7 +2,8 @@
 
 import Head from 'next/head';
 import { MyLanguage } from "@/context/myLanguage";
-import { useContext, useState, useEffect } from "react";
+import { useContext} from "react";
+import Link from 'next/link';
 
 export default function EmptyCart() {
     const { language } = useContext(MyLanguage);
@@ -55,20 +56,22 @@ export default function EmptyCart() {
                  It looks like you haven't added any products to your cart yet.
           </p>
 
-         
+         <Link href={"/store"}>
           <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-6 rounded-md transition duration-150 ease-in-out">
           Return to the store
           </button>
+          </Link>
             </div>:
        <div className='text-center'>
               <p className="text-lg text-gray-600 mb-8 text-center max-w-md">
              به نظر می‌رسد هنوز هیچ محصولی به سبد خرید خود اضافه نکرده‌اید.
            </p>
  
-       
+          <Link href={"/store"}>
            <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-6 rounded-md transition duration-150 ease-in-out">
              بازگشت به فروشگاه
            </button>
+           </Link>
        </div>
           }
          
